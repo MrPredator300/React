@@ -1,4 +1,4 @@
-This code in taken from the folder src App.js 
+This was the default code and it is taken from the folder src App.js 
 
 import logo from './logo.svg';
 import './App.css';
