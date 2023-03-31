@@ -86,7 +86,8 @@ const SignUp = () => {
   };
 
   const handelSubmit = (event) => {
-    console.log("index",index)
+//    console.log("index",index)
+    
     event.preventDefault(); //This will stop the page from refreshing
     if (validateForm()) {
       let data = {
