@@ -1,3 +1,7 @@
+//This File does not work Properly rewatch the Lecture 
+//Errors: checkedbox after clicking on it it does not strike the sentance
+//When Updating the todo list it does not update properly
+
 import React , {useState} from 'react'
 
 const initialState = [
