@@ -1,9 +1,10 @@
-//https://www.geeksforgeeks.org/reactjs-calculator-app-introduction/ 
 //import { Component } from "react";
 import React from "react";
 import CalculatorTitle from "./CalculatorTitle";
 import OutputScreen from "./OutputScreen";
 import Button from "./Button";
+
+
 
 class Calculator extends React.Component
 {
@@ -18,9 +19,9 @@ class Calculator extends React.Component
         this.handelClick = this.handelClick.bind(this);
     }
 
-    handelClick(event)
-    {
+    handelClick = (event) =>  {
         const value = event.target.value;
+        console.log(value);
         switch(value) 
         {
             case '=': {
@@ -44,7 +45,6 @@ class Calculator extends React.Component
                         else
                             this.setState({
                                 answer: ans,
-                                question: ''
                             });
                         break;
                 }
@@ -65,9 +65,11 @@ class Calculator extends React.Component
                 break;
             }
             default: {
+                console.log("default");
                 this.setState({
                     question: this.state.question += value
                 })
+                console.log(this.state.question);
                 break;
             }
         }
@@ -80,34 +82,34 @@ class Calculator extends React.Component
             <p align="Center"><h1>Calculator Project 1</h1></p>
             <CalculatorTitle value="My Calculator" />
             <div class="mainCalc">
-                <OutputScreen />
+                <OutputScreen question={this.state.question} answer={this.state.answer} />
                 <div className="button-row-1">
-                    <Button label={"Clear"} />
-                    <Button label={"Delete"} />
-                    <Button label={"."} />
-                    <Button label={"/"} />
+                    <Button label={"Clear"} handelClick={this.handelClick}  />
+                    <Button label={"Delete"} handelClick={this.handelClick}  />
+                    <Button label={"."} handelClick={this.handelClick}  />
+                    <Button label={"/"} handelClick={this.handelClick}  />
                 </div>
                 <div className="button-row-2">
-                    <Button label={"7"} />
-                    <Button label={"8"} />
-                    <Button label={"9"} />
-                    <Button label={"*"} />
+                    <Button label={"7"} handelClick={this.handelClick} />
+                    <Button label={"8"} handelClick={this.handelClick}  />
+                    <Button label={"9"} handelClick={this.handelClick} />
+                    <Button label={"*"} handelClick={this.handelClick} />
                 </div>
                 <div className="button-row-3">
-                    <Button label={"4"} />
-                    <Button label={"5"} />
-                    <Button label={"6"} />
-                    <Button label={"-"} />
+                    <Button label={"4"} handelClick={this.handelClick} />
+                    <Button label={"5"} handelClick={this.handelClick} />
+                    <Button label={"6"} handelClick={this.handelClick} />
+                    <Button label={"-"} handelClick={this.handelClick}  />
                 </div>
                 <div className="button-row-4">
-                    <Button label={"1"} />
-                    <Button label={"2"} />
-                    <Button label={"3"} />
-                    <Button label={"+"} />
+                    <Button label={"1"} handelClick={this.handelClick} />
+                    <Button label={"2"} handelClick={this.handelClick} />
+                    <Button label={"3"} handelClick={this.handelClick} />
+                    <Button label={"+"} handelClick={this.handelClick} />
                 </div>
                 <div className="button-row-5">
-                    <Button label={"0"} />
-                    <Button label={"="} />
+                    <Button label={"0"} handelClick={this.handelClick} />
+                    <Button label={"="} handelClick={this.handelClick} />
                 </div>
             </div>
         </div>
