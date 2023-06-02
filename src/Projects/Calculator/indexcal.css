@@ -17,7 +17,7 @@
     margin-bottom: 20px;
     border-radius: 2px;
     border: 2px solid black;
-    color: #2346b9;
+    color: #3134e9;
 }
 
 .mainCalc {
@@ -30,7 +30,7 @@
 
 input[type="button"] {
     width: 100px;
-    background: #8688fd;
+    background: #5b7ef3;
     border: 1px solid #222;
     padding: 10px 20px;
     color: black;

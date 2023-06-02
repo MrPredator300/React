@@ -4,6 +4,7 @@ import CalculatorTitle from "./CalculatorTitle";
 import OutputScreen from "./OutputScreen";
 import Button from "./Button";
 
+import "./indexcal.css"
 
 
 class Calculator extends React.Component
@@ -19,11 +20,11 @@ class Calculator extends React.Component
         this.handelClick = this.handelClick.bind(this);
     }
 
-    handelClick = (event) =>  {
+    handelClick = (event) =>  { 
         const value = event.target.value;
         console.log(value);
         switch(value) 
-        {
+        {   
             case '=': {
                 if(this.state.question!=='')
                 {
