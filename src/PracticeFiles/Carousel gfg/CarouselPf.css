@@ -1,0 +1,13 @@
+body {
+    background-color: rgb(54, 209, 196);
+}
+ 
+.tag {
+    text-align: center;
+}
+ 
+.slick-slide img {
+    margin: auto;
+    width: 50%;
+    height: 50%;
+}
